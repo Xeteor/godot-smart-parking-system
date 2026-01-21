@@ -1,0 +1,816 @@
+[gd_scene load_steps=29 format=3 uid="uid://bag16md25rfl3"]
+
+[ext_resource type="Script" uid="uid://d314c7dj4sfyy" path="res://scripts/menu.gd" id="1_yqeox"]
+[ext_resource type="FontFile" uid="uid://cqoyxorn5hlmt" path="res://assets/font/PTSans-BoldItalic.ttf" id="2_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://bepv34a6cnmo6" path="res://assets/image/Untitled_design__13_-removebg-preview.png" id="2_ufwb2"]
+[ext_resource type="Texture2D" uid="uid://c1yyfshw5i387" path="res://assets/image/menu.svg" id="3_g3eks"]
+[ext_resource type="FontFile" uid="uid://drrkde62rmnu4" path="res://assets/font/PTSans-Bold.ttf" id="4_v86rl"]
+[ext_resource type="FontFile" uid="uid://qqxwfubvnke0" path="res://assets/font/PTSans-Regular.ttf" id="5_13sgg"]
+[ext_resource type="Texture2D" uid="uid://ccnapx225k2ny" path="res://assets/image/search.svg" id="6_g3eks"]
+[ext_resource type="Texture2D" uid="uid://brxufh3iggg6y" path="res://assets/image/Generated Image November 11, 2025 - 12_58PM.png" id="7_70i5f"]
+[ext_resource type="Texture2D" uid="uid://b7fc6ig4qc3w6" path="res://assets/image/wisma.jpeg" id="8_mj5lg"]
+[ext_resource type="Texture2D" uid="uid://bdbb1pw7nsqp2" path="res://assets/image/delta.jpeg" id="9_ufwb2"]
+[ext_resource type="Texture2D" uid="uid://beqnsl5xanl8e" path="res://assets/image/kingwood.jpeg" id="10_mj5lg"]
+[ext_resource type="Texture2D" uid="uid://bv60tnpktgvyj" path="res://assets/image/sibu.jpeg" id="12_6cdou"]
+[ext_resource type="Texture2D" uid="uid://big0j6w6o0cuo" path="res://assets/image/kuching.jpeg" id="13_7jp70"]
+[ext_resource type="Texture2D" uid="uid://cxyrciqwp06bg" path="res://assets/image/tokyo.jpeg" id="14_mxgkd"]
+[ext_resource type="Texture2D" uid="uid://ckot0d00mayry" path="res://assets/image/oxford uk.jpeg" id="15_g6gyw"]
+[ext_resource type="Texture2D" uid="uid://djriguw04jw1j" path="res://assets/image/Generated Image November 12, 2025 - 10_32AM.png" id="16_mxgkd"]
+[ext_resource type="Texture2D" uid="uid://1af7nd0c0kri" path="res://assets/image/Generated Image November 12, 2025 - 11_01AM.png" id="17_g6gyw"]
+[ext_resource type="Texture2D" uid="uid://bn6fbdp7osnkh" path="res://assets/image/Generated Image November 12, 2025 - 11_16AM.png" id="18_3dmrc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4h3mk"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ufwb2"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3eks"]
+bg_color = Color(0.963069, 0.963993, 0.974453, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v86rl"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.137255)
+shadow_size = 9
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g3eks"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v86rl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6lef"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13sgg"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70i5f"]
+bg_color = Color(3.85046e-07, 0.630259, 0.977755, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mj5lg"]
+bg_color = Color(0, 0.631373, 0.976471, 1)
+corner_radius_top_left = 160
+corner_radius_top_right = 150
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqeox")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4h3mk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.0431373)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ufwb2")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
+z_index = 1
+custom_minimum_size = Vector2(0, 91)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ufwb2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Panel"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = ExtResource("2_4ytvr")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "  [color=ORANGE]S[/color][color=BLUE]P[/color][color=RED]K[/color]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+tab_size = 0
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.15
+texture_normal = ExtResource("3_g3eks")
+stretch_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+clip_contents = false
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_g3eks")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.281187, 0.281187, 0.281187, 1)
+theme_override_fonts/font = ExtResource("5_13sgg")
+theme_override_font_sizes/font_size = 25
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 45
+text = "Save 80% of your time when 
+searching for parking."
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.281187, 0.281187, 0.281187, 1)
+theme_override_fonts/font = ExtResource("5_13sgg")
+theme_override_font_sizes/font_size = 25
+text = "Build to help you find parking faster."
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.281187, 0.281187, 0.281187, 1)
+theme_override_fonts/font = ExtResource("5_13sgg")
+theme_override_font_sizes/font_size = 25
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(600, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_v86rl")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel2/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_g3eks")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.537011, 0.537011, 0.537011, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+text = "Destination"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.662745, 0.639216, 0.639216, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g3eks")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v86rl")
+text = "Sibu"
+max_length = 100
+expand_to_text_length = true
+flat = true
+caret_column = 4
+caret_mid_grapheme = true
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i6lef")
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_13sgg")
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/Panel/MarginContainer/VBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_70i5f")
+text = "Search"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 40
+text = "Recently viewed"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mj5lg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("7_70i5f")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 21
+text = "Grand Suite De Parpasan"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mj5lg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel2"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("8_mj5lg")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 21
+text = "Wisma Sanyan"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel3" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mj5lg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel3"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("9_ufwb2")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 21
+text = "Delta Mall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel4" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mj5lg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel4"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("10_mj5lg")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel4/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 21
+text = "Kingwood Hotel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 40
+text = "Popular Searches"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Cities"
+flat = true
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Destinations"
+flat = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mj5lg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("12_6cdou")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 31
+text = "
+ Sibu, Sarawak
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mj5lg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel2"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("13_7jp70")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 31
+text = "
+ Kuching, Sarawak
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel3" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mj5lg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel3"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("14_mxgkd")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 31
+text = "
+Tokyo, Japan
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel4" type="Panel" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mj5lg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel4"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel4/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("15_g6gyw")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel4/VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 31
+text = "
+Oxford, United Kingdom
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/HBoxContainer/Panel4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1000)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+texture = ExtResource("16_mxgkd")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 30
+text = "Save Your Time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Discover a free parking slot as fast
+as possible"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+texture = ExtResource("17_g6gyw")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 30
+text = "Simplify Search"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Search through million of
+places in a seconds"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+texture = ExtResource("18_3dmrc")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_v86rl")
+theme_override_font_sizes/font_size = 30
+text = "CLEAN JOURNEY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer3/VBoxContainer/HBoxContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Spend less time searching,
+Create zero emission impact. "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/ScrollContainer/HBoxContainer/Panel/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,0 +1,252 @@
+[gd_scene load_steps=27 format=3 uid="uid://c4ilbjlbebmyw"]
+
+[ext_resource type="PackedScene" uid="uid://ctgswnqhqx7b" path="res://3d model/car/koenigsegg_jesko_spear__www.vecarz.com.glb" id="1_jjxat"]
+[ext_resource type="Script" uid="uid://b3r0w1fcjyyq3" path="res://scripts/parking.gd" id="1_yx85y"]
+[ext_resource type="PackedScene" uid="uid://d3b6fiko6wh32" path="res://3d model/mall/uploads_files_4724772_Mall.glb" id="2_qqtoa"]
+[ext_resource type="Texture2D" uid="uid://cnbj7yj8c7i4t" path="res://3d model/material/asphalt/Asphalt023S_1K-JPG_Color.jpg" id="3_2hhvk"]
+[ext_resource type="Texture2D" uid="uid://dmwb3rnjhyl7f" path="res://3d model/material/asphalt/Asphalt023S_1K-JPG_Displacement.jpg" id="4_nbwgq"]
+[ext_resource type="Texture2D" uid="uid://pl4j4sn6lpap" path="res://3d model/material/asphalt/Asphalt023S_1K-JPG_NormalGL.jpg" id="5_74gpm"]
+[ext_resource type="Texture2D" uid="uid://cdjqwwo2mkvmt" path="res://3d model/material/asphalt/Asphalt023S_1K-JPG_Roughness.jpg" id="6_djsf3"]
+[ext_resource type="Texture2D" uid="uid://b5kn63neq5hu0" path="res://3d model/material/grass/Grass008_1K-JPG_Color.jpg" id="7_jou4b"]
+[ext_resource type="Texture2D" uid="uid://cl20fc4s25xc8" path="res://3d model/material/grass/Grass008_1K-JPG_NormalGL.jpg" id="8_va4xs"]
+[ext_resource type="Texture2D" uid="uid://bdm47b1eg1sv0" path="res://3d model/material/grass/Grass008_1K-JPG_Roughness.jpg" id="9_yx85y"]
+[ext_resource type="Texture2D" uid="uid://cjkilhcypmub8" path="res://3d model/material/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="10_ba5th"]
+[ext_resource type="Script" uid="uid://cmqb6vfp38ljk" path="res://scripts/touch.gd" id="11_va4xs"]
+[ext_resource type="FontFile" uid="uid://cqoyxorn5hlmt" path="res://assets/font/PTSans-BoldItalic.ttf" id="13_ob7uh"]
+[ext_resource type="Texture2D" uid="uid://b5yychbsyiwjn" path="res://assets/circle/cropped_circle_image.png" id="14_p8qbc"]
+[ext_resource type="Texture2D" uid="uid://csopvndert6yg" path="res://assets/circle/cropped_circle_image (1).png" id="15_codkl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jou4b"]
+albedo_texture = ExtResource("3_2hhvk")
+roughness_texture = ExtResource("6_djsf3")
+normal_enabled = true
+normal_texture = ExtResource("5_74gpm")
+heightmap_texture = ExtResource("4_nbwgq")
+uv1_scale = Vector3(0.095, 0.095, 0.095)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_xwg4l"]
+material = SubResource("StandardMaterial3D_jou4b")
+size = Vector3(1000, 1, 1000)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ob7uh"]
+albedo_texture = ExtResource("7_jou4b")
+roughness_texture = ExtResource("9_yx85y")
+normal_enabled = true
+normal_texture = ExtResource("8_va4xs")
+heightmap_enabled = true
+heightmap_texture = ExtResource("4_nbwgq")
+uv1_scale = Vector3(0.095, 0.095, 0.095)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_xnnwo"]
+material = SubResource("StandardMaterial3D_ob7uh")
+size = Vector3(1000, 1, 1000)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p8qbc"]
+size = Vector3(1, 1, 14)
+
+[sub_resource type="BoxMesh" id="BoxMesh_codkl"]
+size = Vector3(1, 1, 37)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xd031"]
+panorama = ExtResource("10_ba5th")
+
+[sub_resource type="Sky" id="Sky_vvk2g"]
+sky_material = SubResource("PanoramaSkyMaterial_xd031")
+
+[sub_resource type="Environment" id="Environment_deu60"]
+background_mode = 2
+sky = SubResource("Sky_vvk2g")
+tonemap_mode = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yx85y"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ba5th"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_yx85y")
+
+[node name="car1" parent="." instance=ExtResource("1_jjxat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1834, 0, 0)
+
+[node name="car2" parent="." instance=ExtResource("1_jjxat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.58336, 0, 0)
+
+[node name="car3" parent="." instance=ExtResource("1_jjxat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.71664, 0, 0)
+
+[node name="car4" parent="." instance=ExtResource("1_jjxat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4166, 0, 0)
+
+[node name="uploads_files_4724772_Mall" parent="." instance=ExtResource("2_qqtoa")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -53.9445)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.84003, -0.5, 0)
+mesh = SubResource("BoxMesh_xwg4l")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, 0)
+mesh = SubResource("BoxMesh_xnnwo")
+
+[node name="linear" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57623, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="linear"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="linear/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.57787, 0, 0)
+mesh = SubResource("BoxMesh_p8qbc")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="linear/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4572, 0, 0)
+mesh = SubResource("BoxMesh_p8qbc")
+skeleton = NodePath("../..")
+
+[node name="Node3D2" type="Node3D" parent="linear"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="linear/Node3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.57787, 0, 0)
+mesh = SubResource("BoxMesh_p8qbc")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="linear/Node3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4572, 0, 0)
+mesh = SubResource("BoxMesh_p8qbc")
+skeleton = NodePath("../..")
+
+[node name="Node3D3" type="Node3D" parent="linear"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="linear/Node3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.57787, 0, 0)
+mesh = SubResource("BoxMesh_p8qbc")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="linear/Node3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4572, 0, 0)
+mesh = SubResource("BoxMesh_p8qbc")
+skeleton = NodePath("../..")
+
+[node name="Node3D4" type="Node3D" parent="linear"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="linear/Node3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.57787, 0, 0)
+mesh = SubResource("BoxMesh_p8qbc")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="linear/Node3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4572, 0, 0)
+mesh = SubResource("BoxMesh_p8qbc")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="linear"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.57787, -0.2, -7.26139)
+mesh = SubResource("BoxMesh_codkl")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_deu60")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.18333, 19.9045, 13.3249)
+light_energy = 16.0
+light_indirect_energy = 3.782
+light_specular = 1.196
+light_bake_mode = 1
+shadow_enabled = true
+shadow_normal_bias = 0.0
+shadow_blur = 10.0
+omni_range = 150.609
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_va4xs")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(720, 1280)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Control/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.998632, 0.0522837, 0, -0.0522837, 0.998632, -3.25384, 39.0107, 62.8523)
+fov = 90.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 110)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yx85y")
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Control/VBoxContainer/Panel/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("13_ob7uh")
+theme_override_font_sizes/font_size = 30
+text = " RETURN "
+
+[node name="Panel2" type="Panel" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ba5th")
+
+[node name="Panel3" type="Panel" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yx85y")
+
+[node name="TextureButton" type="TextureButton" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -200.0
+offset_right = -18.0
+offset_bottom = -18.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+pivot_offset = Vector2(100, 100)
+texture_normal = ExtResource("14_p8qbc")
+texture_pressed = ExtResource("15_codkl")
+stretch_mode = 3
+
+[connection signal="pressed" from="Control/VBoxContainer/Panel/CenterContainer/Button" to="Control" method="_on_return_pressed"]

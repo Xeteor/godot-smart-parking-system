@@ -1,0 +1,15 @@
+LightmapGI
+MeshInstance3D
+Button
+VBoxContainer
+Panel
+TextureButton
+CenterContainer
+OmniLight3D
+SubViewport
+SubViewportContainer
+Control
+Camera3D
+WorldEnvironment
+Node3D
+Node2D

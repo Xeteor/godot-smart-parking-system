@@ -1,0 +1,186 @@
+[gd_scene load_steps=15 format=3 uid="uid://c4ilbjlbebmyw"]
+
+[ext_resource type="PackedScene" uid="uid://ctgswnqhqx7b" path="res://3d model/car/koenigsegg_jesko_spear__www.vecarz.com.glb" id="1_jjxat"]
+[ext_resource type="Script" uid="uid://b3r0w1fcjyyq3" path="res://scripts/parking.gd" id="1_yx85y"]
+[ext_resource type="LightmapGIData" uid="uid://3i8xl4n2urn7" path="res://scenes/format.lmbake" id="8_74gpm"]
+[ext_resource type="PackedScene" uid="uid://c7dgsesxtgy8d" path="res://3d model/latest/p1.glb" id="8_djsf3"]
+[ext_resource type="Texture2D" uid="uid://cjkilhcypmub8" path="res://3d model/material/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="10_ba5th"]
+[ext_resource type="Script" uid="uid://cmqb6vfp38ljk" path="res://scripts/touch.gd" id="11_va4xs"]
+[ext_resource type="FontFile" uid="uid://cqoyxorn5hlmt" path="res://assets/font/PTSans-BoldItalic.ttf" id="13_ob7uh"]
+[ext_resource type="Script" uid="uid://curyc4cw6g1as" path="res://scripts/fab.gd" id="14_xwg4l"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xd031"]
+panorama = ExtResource("10_ba5th")
+
+[sub_resource type="Sky" id="Sky_vvk2g"]
+sky_material = SubResource("PanoramaSkyMaterial_xd031")
+
+[sub_resource type="Environment" id="Environment_deu60"]
+background_mode = 2
+sky = SubResource("Sky_vvk2g")
+tonemap_mode = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yx85y"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ba5th"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwg4l"]
+bg_color = Color(0, 0.342265, 0.56852, 1)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_yx85y")
+
+[node name="car1" parent="." instance=ExtResource("1_jjxat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8164, 0, -4.39643)
+
+[node name="car2" parent="." instance=ExtResource("1_jjxat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.01536, 0, -4.78627)
+
+[node name="car3" parent="." instance=ExtResource("1_jjxat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.82542, 0, -4.10721)
+
+[node name="car4" parent="." instance=ExtResource("1_jjxat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5233, 0, -3.55717)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_deu60")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.18333, 19.9045, 13.3249)
+light_energy = 16.0
+light_indirect_energy = 3.782
+light_specular = 1.196
+light_bake_mode = 1
+shadow_enabled = true
+shadow_normal_bias = 0.0
+shadow_blur = 10.0
+omni_range = 150.609
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_va4xs")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(720, 1280)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Control/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.998632, 0.0522837, 0, -0.0522837, 0.998632, -3.25384, 39.0107, 62.8523)
+fov = 90.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 110)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yx85y")
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Control/VBoxContainer/Panel/CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("13_ob7uh")
+theme_override_font_sizes/font_size = 30
+text = " RETURN "
+
+[node name="Panel2" type="Panel" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ba5th")
+
+[node name="Panel3" type="Panel" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yx85y")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -96.0
+offset_right = -64.0
+offset_bottom = -56.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 10
+script = ExtResource("14_xwg4l")
+
+[node name="Button" type="Button" parent="Control/VBoxContainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xwg4l")
+text = "PARKING 1"
+
+[node name="Button2" type="Button" parent="Control/VBoxContainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xwg4l")
+text = "PARKING 2"
+
+[node name="Button3" type="Button" parent="Control/VBoxContainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xwg4l")
+text = "PARKING 3"
+
+[node name="Button4" type="Button" parent="Control/VBoxContainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xwg4l")
+text = "PARKING 4"
+
+[node name="Button5" type="Button" parent="Control/VBoxContainer2"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_xwg4l")
+text = "SHOW"
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.4476, 0)
+light_data = ExtResource("8_74gpm")
+
+[node name="p2" parent="." instance=ExtResource("8_djsf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -690.121, 0, 294.567)
+
+[connection signal="pressed" from="Control/VBoxContainer/Panel/CenterContainer/Button" to="." method="_on_button_pressed"]

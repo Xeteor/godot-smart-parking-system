@@ -1,0 +1,39 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://m40tlw62vr8o"
+path.s3tc="res://.godot/imported/p1_texture asphalt seamless road textures deviantart dark res concrete map psd maps line unity3d yellow freecreatives useful lines photoshop backgrounds.jpg-6b08b0d25822254a6d3eaf4475aa25e4.s3tc.ctex"
+path.etc2="res://.godot/imported/p1_texture asphalt seamless road textures deviantart dark res concrete map psd maps line unity3d yellow freecreatives useful lines photoshop backgrounds.jpg-6b08b0d25822254a6d3eaf4475aa25e4.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "adf9f2319f465a2ea9eb7ac6fea2c59e"
+}
+
+[deps]
+
+source_file="res://3d model/latest/p1_texture asphalt seamless road textures deviantart dark res concrete map psd maps line unity3d yellow freecreatives useful lines photoshop backgrounds.jpg"
+dest_files=["res://.godot/imported/p1_texture asphalt seamless road textures deviantart dark res concrete map psd maps line unity3d yellow freecreatives useful lines photoshop backgrounds.jpg-6b08b0d25822254a6d3eaf4475aa25e4.s3tc.ctex", "res://.godot/imported/p1_texture asphalt seamless road textures deviantart dark res concrete map psd maps line unity3d yellow freecreatives useful lines photoshop backgrounds.jpg-6b08b0d25822254a6d3eaf4475aa25e4.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

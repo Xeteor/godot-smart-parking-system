@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc78vvh7omu4v"]
+
+[ext_resource type="Texture2D" uid="uid://bxtyre17fvpjp" path="res://assets/image/logo.png" id="1_cpc1a"]
+[ext_resource type="Script" uid="uid://bc5cgf2slxsr" path="res://scripts/popup.gd" id="1_gxv0h"]
+[ext_resource type="FontFile" uid="uid://cqoyxorn5hlmt" path="res://assets/font/PTSans-BoldItalic.ttf" id="2_gxv0h"]
+
+[node name="popup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gxv0h")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+texture = ExtResource("1_cpc1a")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -110.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "made with"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gxv0h")
+theme_override_font_sizes/font_size = 50
+text = "GODOT"
+horizontal_alignment = 1
+vertical_alignment = 1
